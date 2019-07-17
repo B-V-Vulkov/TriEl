@@ -1,0 +1,25 @@
+.site .background-header {
+    background: var( --background-header );
+}
+
+.site .background-footer {
+    background: var( --background-footer );
+}
+
+
+.site .site-header,
+.site .site-main,
+.site .site-sidebar,
+.site .site-footer {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.site-header {
+    display: flex;
+    align-items: center;
+}
+
+.site-header nav {
+    margin-left: auto;
+}

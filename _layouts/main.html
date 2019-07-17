@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../css/site.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/site.css">
     <title>TriEl LTD</title>
 </head>
 <body>
@@ -13,8 +13,14 @@
         <div class="background-header">
             <header class="site-header">
 
+                {% if page.home == true %}
+                    <h1 class="site-title">
+                        <a href="{{ site.baseurl }}"></a>
+                    </h1>
+                {% endif %}
+
                 <H1 class="site-title">
-                    <a href="/">TriEl<div class="test">Ltd</div></a>
+                    <a href="{{ site.baseurl }}">TriEl<div class="test">Ltd</div></a>
                 </H1>
                         
                 <nav class="site-nav">

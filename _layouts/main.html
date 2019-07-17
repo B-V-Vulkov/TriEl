@@ -17,7 +17,7 @@
 
                 {% if page.home == true %}
                     <h1 class="site-title">
-                        <a href="{{ site.baseurl }}/">{{site.title}}</a>
+                        <a href="{{ site.baseurl }}/"></a>
                     </h1>
                 {% endif %}
 
@@ -30,7 +30,7 @@
                         {% for page in site.pages %}
                             {% if page.title %}
                                 <li>
-                                    <a href="{{ page.url }}/">{{ page.title }}</a>
+                                    <a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a>
                                 </li>
                             {% endif %}
                         {% endfor %}

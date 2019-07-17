@@ -2,7 +2,7 @@ title: TriEl LTD
 email: office@triel.bg
 description: TriEl Ltd. is an independent company which was established in year 2000 with main activities “Engineering, Contracting and Consulting” in the field of Electrical Power Supply Projects.
 baseurl: "/TriEl"
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "/TriEl"
 
 github_username: B-V-Vulkov
 

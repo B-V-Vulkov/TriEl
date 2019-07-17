@@ -5,12 +5,29 @@
 layout: main
 ---
 
-<nav>
-    <ul>
-        {% for post in site.posts %}
-            <li>
-                <a href="{{ post.url }}">{{ post.title }}</a>
-            </li>
-        {% endfor %}
-    </ul>
-</nav>
+<section>
+    <header>
+        <h2>posts Index</h2>
+    </header>
+
+
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat a quasi, nostrum velit aspernatur, corporis delectus et soluta corrupti numquam fugiat voluptates ex veritatis alias labore? Rem excepturi suscipit nam.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti dicta veritatis obcaecati molestiae similique, libero eum iure aliquid, quo laudantium, ea repellendus non. Cupiditate voluptatum in reprehenderit esse animi voluptatibus.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit excepturi inventore recusandae unde aut aperiam esse quaerat ullam voluptate dolorem vel, vero reprehenderit soluta minima sequi doloremque! Doloremque, accusantium sint!</p>
+
+
+    
+
+
+
+    <div class="content">
+        <ul>
+            {% for post in site.posts %}
+                <li>
+                    <a href="{{ post.url }}">{{ post.title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>

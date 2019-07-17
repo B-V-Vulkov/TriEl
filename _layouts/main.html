@@ -20,7 +20,7 @@
                 {% endif %}
 
                 <H1 class="site-title">
-                    <a href="{{ site.baseurl }}">TriEl<div class="test">Ltd</div></a>
+                    <a href="{{ site.baseurl }}/">TriEl<div class="test">Ltd</div></a>
                 </H1>
                         
                 <nav class="site-nav">
@@ -28,7 +28,7 @@
                         {% for page in site.pages %}
                             {% if page.title %}
                                 <li>
-                                    <a href="{{ page.url }}">{{ page.title }}</a>
+                                    <a href="{{ page.url }}/">{{ page.title }}</a>
                                 </li>
                             {% endif %}
                         {% endfor %}

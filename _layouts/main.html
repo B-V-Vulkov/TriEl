@@ -10,60 +10,84 @@
     <script src="{{ site.baseurl }}/scripts/site.js"></script>
 </head>
 <body>
+
     <div class="site">
 
-        <div class="background-header">
+        <!-- Site Header -->
+        <div class="wrapper-header">
             <header class="site-header">
 
-                {% if page.home == true %}
-                    <h1 class="site-title">
-                        <a href="{{ site.baseurl }}/"></a>
-                    </h1>
-                {% endif %}
-
-                <H1 class="site-title">
-                    <a href="{{ site.baseurl }}/">TriEl<div class="test">Ltd</div></a>
-                </H1>
-                        
+                <!-- For Site Title -->
+                {% assign pages = site.pages | sort: "nav-order"  %}
+                {% for p in pages %}
+                    {% if p.title == 'Home' %}                           
+                        {% if p.language == page.language %}
+                            <H1 class="site-title">
+                                <a href="{{ p.url | prepend: site.baseurl }}">TriEl<span class="last-letters">Ltd</span></a>
+                            </H1>
+                        {% endif %}
+                    {% endif %}        
+                {% endfor %}
+                
+                <!-- For Site Navigation -->
                 <nav class="site-nav">
-                    <ul>
-                        {% for page in site.pages %}
-                            {% if page.title %}
-                                <li>
-                                    <a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a>
-                                </li>
-                            {% endif %}
+                        <ul>
+                    {% assign pages = site.pages | sort: "nav-order"  %}
+                        {% for p in pages %}
+                            {% if p.title != 'Home' %}                           
+                                {% if p.language == page.language %}
+                                  
+                                        <li class="{{ page.class }}">
+                                            <a href="{{ p.url | prepend: site.baseurl }}">{{ p.title }}</a>
+                                        </li>
+                                   
+                                {% endif %}
+                            {% endif %}        
                         {% endfor %}
                     </ul>
-                </nav>
+                  </nav>
 
             </header>
         </div>
 
-        
+        <!-- Site Main Section -->
+        <div class="wrapper-main">
 
-    <main class="site-main">
-        {% if page.title %}
-            <h1>{{page.title}}</h1>
-        {% endif %}
+            <main class="site-main">
+                {{ page.content }}
+            </main>
 
-        {{ page.content }}
+        </div>
 
-    </main>
+        <!-- Site Footer -->
+        <div class="wrapper-footer">
 
-    <aside class="site-sidebar">
+            <footer class="site-footer">
 
-    </aside>
+                <!-- For Language Switching -->
+                <nav class="language-switcher">
+                    {% if page.name contains "index" %}
+                        <a class="en" href="{{ site.baseurl }}/">EN</a>
+                        <a class="bg" href="{{ site.baseurl | append: "/bg" }}">BG</a>
+                    {% else %}
+                        <a class="en" href="{{ site.baseurl | append: page.handle }}">EN</a>
+                        <a class="bg" href="{{ site.baseurl | append: "/bg" | append: page.handle }}">BG</a>
+                    {% endif %}
+                </nav>
 
-    <div class="background-footer">
+                <!-- Copyright Information -->
+                {% if page.language == 'en' %}
+                    <p>All rights reserved</p>
+                {% else %}
+                    <p>Всички права запазени</p>
+                {% endif %}
 
-        <footer class="site-footer">
-            <p>All rights reserved &copy; {{site.title}}</p>
-        </footer>
+                <p>&copy; 2019-2019 {{site.title}}</p>
+
+            </footer>
+
+        </div>
 
     </div>
-
-    </div>
-
 </body>
 </html>

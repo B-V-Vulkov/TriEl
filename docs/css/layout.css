@@ -1,19 +1,24 @@
-.site .background-header {
-    background: var( --background-header );
+
+.site .wrapper-header {
+    border-bottom: 2px solid #eee;
+    background: rgba(255, 255, 255, 0.95);
+    box-sizing: border-box;
+    z-index: 10001;
 }
 
-.site .background-footer {
+.site .wrapper-footer {
     background: var( --background-footer );
 }
 
-
 .site .site-header,
-.site .site-main,
-.site .site-sidebar,
 .site .site-footer {
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 2em;
+}
+
+.wrapper-main {
+    margin-top: 4em;
 }
 
 .site-header {
@@ -24,3 +29,14 @@
 .site-header nav {
     margin-left: auto;
 }
+
+
+.wrapper-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+
+
+

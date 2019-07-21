@@ -1,0 +1,248 @@
+/* 
+Homo Page
+Main Section
+*/
+
+/* styles for the home-section-image */
+.home-section-image {
+    background-image: url('../img/Home-Page/background.jpg');
+    background-position:  center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    height: 800px;
+    margin-bottom: 2em;
+}
+
+.home-section-image .color-filter {
+    background: rgba(0, 0, 0, 0.3);
+    width: 100%;
+}
+
+.home-section-image .content {
+    background: rgba(0, 0, 0, 0.2);
+    color: rgba(235, 240, 245, 1);
+    width: 100%;
+    margin-top: 1em;
+}
+
+.home-section-image .content h1 {
+    padding: 0.1em 2rem;
+    max-width: var( --site-max-width );
+    margin: 1em auto;
+}
+
+/* styles for the home-section-activity */
+.home-section-activity {
+    max-width: var( --site-max-width );
+    margin: 0 auto;
+    text-align: center;
+}
+
+.home-section-activity h2 {
+    width: 100%;
+    padding: 0;
+}
+
+.home-section-activity h2::after {
+    content: '';
+    width: 80px;
+    height: 3px;
+    background: rgb(50, 90, 130);
+    display: block;
+    margin: 0.5em auto;
+}
+
+.home-section-activity ul {
+    display: flex;
+    justify-content: center;
+}
+
+.home-section-activity ul li {
+    list-style: none;
+    width: 30%;
+    padding: 0 1em;
+    margin-top: 1em;
+}
+
+.home-section-activity ul li h4 {
+    color: rgb(50, 90, 130);
+}
+
+/* adding icons for home-section-activity*/
+.home-section-activity .scope::before,
+.home-section-activity .activity::before,
+.home-section-activity .partners::before {
+    font-family: 'Font Awesome 5 Free';
+    font-size: 1.7em;
+    color: #333;
+    display: block;
+    margin-bottom: 0.2em;
+}
+
+.home-section-activity .scope::before {
+    content: '\f57d';
+}
+
+.home-section-activity .activity::before {
+    content: '\f4ce';
+}
+
+.home-section-activity .partners::before {
+    content: '\f2b5';
+}
+
+/* styles for the home-section-description */
+.home-section-description-background {
+    background: rgba(235, 240, 245, 1);
+    padding: 2em;
+}
+
+.home-section-description-text {
+    text-align: center;
+    max-width: var( --site-max-width );
+    margin: 0 auto;
+}
+
+.home-section-description-text h2 {
+    padding: 0;
+}
+
+.home-section-description-text h2::after {
+    content: '';
+    width: 80px;
+    height: 3px;
+    background: rgb(50, 90, 130);
+    display: block;
+    margin: 0.5em auto;
+}
+
+.home-section-description-text p:last-child {
+    padding-bottom: 0;
+}
+
+/* styles for the home-section-team */
+.home-section-team {
+    text-align: center;
+    max-width: var( --site-max-width );
+    margin: 0 auto;
+    padding: 2em;
+}
+
+.home-section-team h2 {
+    width: 100%;
+    padding: 0;
+}
+
+.home-section-team h2::after {
+    content: '';
+    width: 80px;
+    height: 3px;
+    background: rgb(50, 90, 130);
+    display: block;
+    margin: 0.5em auto;
+}
+
+.home-section-team ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+}
+
+.home-section-team ul li {
+    width: 28%;
+    margin: 1em;
+    list-style: none;
+}
+
+.home-section-team .content {
+    border: 1px solid black;
+    padding: 1em;
+    border-radius: 0.3em;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+    opacity: 0.85;
+    transition: opacity 0.4s linear, box-shadow 0.3s linear;
+
+}
+
+.home-section-team .content:hover {
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0, 0.8);
+    opacity: 1;
+}
+
+.home-section-team .picture {
+    background-position:  center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    width: 100%;
+    height: auto;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+    border-radius: 0.2em;
+}
+
+.home-section-team h4 {
+    color: #333;
+}
+
+.home-section-team h6 {
+    color: rgb(50, 90, 130);
+}
+
+.home-section-team .contacts {
+    padding: 1em;
+}
+
+.home-section-team .email{
+    padding: 0;
+}
+
+.home-section-team .email::before {
+    font-family: 'Font Awesome 5 Free';
+    color: #333;
+    content: '\f0e0';
+}
+
+
+
+
+
+
+
+
+.l {
+    width: 100%;
+    background: rgba(235, 240, 245, 1);
+    padding: 2em;
+    
+    justify-content: center;
+}
+
+.con {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+.test {
+    display: flex;
+}
+
+.test input,
+.test button {
+    display: inline-block;
+}
+
+
+
+

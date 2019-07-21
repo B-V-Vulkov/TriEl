@@ -1,4 +1,7 @@
 :root {
-    --background-header: #eee;
-    --background-footer: #eee;
+    --background-header: #aaa;
+    --background-footer: #222;
+
+
+    --site-max-width: 1000px;
 }

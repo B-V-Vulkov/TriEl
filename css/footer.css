@@ -66,6 +66,7 @@ Site Footer
 /* styles for the section-copyright */
 .section-copyright {
     margin: 0 auto;
+    color: rgb(50, 90, 130);
 }
 
 .section-copyright p {

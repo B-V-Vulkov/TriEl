@@ -1,5 +1,5 @@
 /* 
-Homo Page
+Home Page
 Main Section
 */
 
@@ -75,7 +75,7 @@ Main Section
 .home-section-activity .partners::before {
     font-family: 'Font Awesome 5 Free';
     font-size: 1.7em;
-    color: #333;
+    color: rgba(50, 50, 50, 1);
     display: block;
     margin-bottom: 0.2em;
 }
@@ -163,7 +163,6 @@ Main Section
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
     opacity: 0.85;
     transition: opacity 0.4s linear, box-shadow 0.3s linear;
-
 }
 
 .home-section-team .content:hover {
@@ -182,67 +181,36 @@ Main Section
     border-radius: 0.2em;
 }
 
-.home-section-team h4 {
-    color: #333;
+.home-section-team .name {
+    color: rgba(50, 50, 50, 1);
 }
 
-.home-section-team h6 {
+.home-section-team .job-title {
+    color: rgba(50, 50, 50, 1);
+    padding: 0.8em;
+}
+
+.home-section-team .linkedin-profile{
     color: rgb(50, 90, 130);
-}
-
-.home-section-team .contacts {
-    padding: 1em;
-}
-
-.home-section-team .email{
+    display: block;
+    
     padding: 0;
 }
 
-.home-section-team .email::before {
-    font-family: 'Font Awesome 5 Free';
-    color: #333;
-    content: '\f0e0';
+.home-section-team .linkedin-profile::before {
+    font-family: 'Font Awesome 5 Brands';
+    content: '\f08c';
+    padding-right: 0.2em;
 }
 
-
-
-
-
-
-
-
-.l {
-    width: 100%;
+/* styles for the home-section-footer */
+.home-section-footer-background {
     background: rgba(235, 240, 245, 1);
     padding: 2em;
-    
-    justify-content: center;
 }
 
-.con {
-    max-width: 1000px;
+.home-section-footer-text {
+    max-width: var( --site-max-width );
     margin: 0 auto;
     text-align: center;
 }
-
-
-
-
-
-
-
-
-
-
-.test {
-    display: flex;
-}
-
-.test input,
-.test button {
-    display: inline-block;
-}
-
-
-
-

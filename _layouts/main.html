@@ -31,21 +31,19 @@
                 
                 <!-- For Site Navigation -->
                 <nav class="site-nav">
-                        <ul>
-                    {% assign pages = site.pages | sort: "nav-order"  %}
+                    <ul>
+                        {% assign pages = site.pages | sort: "nav-order"  %}
                         {% for p in pages %}
                             {% if p.title != 'Home' %}                           
-                                {% if p.language == page.language %}
-                                  
-                                        <li class="{{ page.class }}">
-                                            <a href="{{ p.url | prepend: site.baseurl }}">{{ p.title }}</a>
-                                        </li>
-                                   
+                                {% if p.language == page.language %}      
+                                    <li class="{{ page.class }}">
+                                        <a href="{{ p.url | prepend: site.baseurl }}">{{ p.title }}</a>
+                                    </li>                       
                                 {% endif %}
                             {% endif %}        
                         {% endfor %}
                     </ul>
-                  </nav>
+                </nav>
 
             </header>
         </div>
@@ -63,31 +61,86 @@
         <div class="wrapper-footer">
 
             <footer class="site-footer">
+                <section class="section-information">
 
-                <!-- For Language Switching -->
-                <nav class="language-switcher">
-                    {% if page.name contains "index" %}
-                        <a class="en" href="{{ site.baseurl }}/">EN</a>
-                        <a class="bg" href="{{ site.baseurl | append: "/bg" }}">BG</a>
-                    {% else %}
-                        <a class="en" href="{{ site.baseurl | append: page.handle }}">EN</a>
-                        <a class="bg" href="{{ site.baseurl | append: "/bg" | append: page.handle }}">BG</a>
-                    {% endif %}
-                </nav>
+                    <div class="site-footer-contacts">
+                        {% if page.language == 'en' %}
+                            <h6>Contacts</h6>
+                        {% else %}
+                            <h6>Контакти</h6>
+                        {% endif %}
+                        <ul>
+                            <li class="phone"> (+359 2) 888 88 88</li>
+                            <li class="email"> something@triel.bg</li>
+                        </ul>
+                    </div>
+            
+                    <div class="site-footer-address">
+                        {% if page.language == 'en' %}
+                            <h6>Address</h6>
+                            <ul>
+                                <li class="address"> 876 Aleksandar Stambolijski</li>
+                                <li>Sofia, Bulgaria</li>
+                            </ul>
+                        {% else %}
+                            <h6>Адрес</h6>
+                            <ul>
+                                <li class="address"> 876 Aлександър Cтамболийски</li>
+                                <li>София, България</li>
+                            </ul>            
+                        {% endif %}
+                    </div>
+
+                    <!-- Language Switching -->
+                    <div class="site-footer-language">
+                        <nav class="language-switcher">
+                            {% if page.language == 'en' %}
+                                <h6>Page language</h6>
+
+                                {% if page.name contains "index" %}
+                                    <ul>
+                                        <li><a class="bg_en" href="{{ site.baseurl | append: "/bg" }}">Български</a></li>
+                                        <li><a class="en_en" href="{{ site.baseurl }}/">English</a></li>
+                                    </ul>
+                                {% else %}
+                                    <ul>
+                                        <li><a class="bg_en" href="{{ site.baseurl | append: "/bg" | append: page.handle }}">Български</a></li>
+                                        <li><a class="en_en" href="{{ site.baseurl | append: page.handle }}">English</a></li>
+                                    </ul>
+                                {% endif %}
+                            {% else %}
+                                <h6>Език на страницата</h6>
+
+                                {% if page.name contains "index" %}
+                                    <ul>
+                                        <li><a class="bg_bg" href="{{ site.baseurl | append: "/bg" }}">Български</a></li>
+                                        <li><a class="en_bg" href="{{ site.baseurl }}/">English</a></li>
+                                    </ul>
+                                {% else %}
+                                    <ul>
+                                        <li><a class="bg_bg" href="{{ site.baseurl | append: "/bg" | append: page.handle }}">Български</a></li>
+                                        <li><a class="en_bg" href="{{ site.baseurl | append: page.handle }}">English</a></li>
+                                    </ul>
+                                {% endif %}
+                            {% endif %}
+                        </nav>
+                    </div>
+                </section>
 
                 <!-- Copyright Information -->
-                {% if page.language == 'en' %}
-                    <p>All rights reserved</p>
-                {% else %}
-                    <p>Всички права запазени</p>
-                {% endif %}
+                <section class="section-copyright">
 
-                <p>&copy; 2019-2019 {{site.title}}</p>
+                    {% if page.language == 'en' %}
+                        <p>All rights reserved &copy; 2019-2019 {{site.title}}</p>
+                    {% else %}
+                        <p>Всички права запазени</p>
+                    {% endif %}
+  
+                </section>
 
             </footer>
-
         </div>
-
+        
     </div>
 </body>
 </html>

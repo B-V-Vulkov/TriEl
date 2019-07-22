@@ -10,8 +10,7 @@
     background: var( --background-footer );
 }
 
-.site .site-header,
-.site .site-footer {
+.site .site-header {
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 2em;

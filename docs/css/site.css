@@ -6,8 +6,19 @@
 
 @import url('layout.css');
 
+@import url('header.css');
 @import url('navigation.css');
 
 @import url('footer.css');
 
-@import url('main.css');
+@import url('page_home.css');
+
+@import url('page_services.css');
+
+@import url('page_projects.css');
+
+@import url('page_references.css');
+
+@import url('page_gallery.css');
+
+@import url('page_contacts.css');

@@ -2,8 +2,10 @@
 Site Footer
 */
 
-.wrapper-footer{
+.wrapper-footer {
+    background: var( --background-footer );
     color: rgba(235, 240, 245, 1);
+    margin: auto 0;
 }
 
 .site-footer {
@@ -51,11 +53,17 @@ Site Footer
     justify-content: center;
 }
 
+.language-switcher .en_en,
+.language-switcher .bg_bg {
+    opacity: 0.4;
+}
+
 .language-switcher .bg_en:hover,
 .language-switcher .en_bg:hover {
     color: rgb(50, 90, 130);
 }
 
+/* styles for the section-copyright */
 .section-copyright {
     margin: 0 auto;
 }
@@ -63,9 +71,4 @@ Site Footer
 .section-copyright p {
     padding: 0;
     font-size: 0.8em;
-}
-
-.en_en,
-.bg_bg {
-    opacity: 0.4;
 }

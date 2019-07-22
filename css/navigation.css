@@ -1,3 +1,8 @@
+
+.site-header nav {
+    margin-left: auto;
+}
+
 .site-nav ul {
     display: flex;
     align-items: center;
@@ -10,28 +15,22 @@
     align-items: center;
 }
 
-
-
 .site-nav ul li a {
     margin: 0.5em;
-
-}
-
-
-header nav ul li a {
     color: rgb(50, 90, 130);
 }
 
-header nav ul li a:hover{
+.site-nav ul li a:hover{
     border-bottom: 2px solid rgb(50, 90, 130);
-    opacity: 1;
 }
 
-.about:nth-child(1) {
+
+
+.site-nav ul li.services:nth-child(1) {
     opacity: 0.5;
 }
 
-.contact:nth-child(2) {
+.site-nav ul li.contact:nth-child(2) {
     opacity: 0.5;
 }
 

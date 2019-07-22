@@ -1,41 +1,13 @@
+/* 
+layouts
+*/
 
-.site .wrapper-header {
-    border-bottom: 2px solid #eee;
-    background: rgba(255, 255, 255, 0.95);
-    box-sizing: border-box;
-    z-index: 10001;
-}
-
-.site .wrapper-footer {
-    background: var( --background-footer );
-}
-
-.site .site-header {
-    max-width: 1000px;
+.site {
+    max-width: 2000px;
     margin: 0 auto;
-    padding: 0 2em;
 }
 
 .wrapper-main {
     margin-top: 4em;
 }
-
-.site-header {
-    display: flex;
-    align-items: center;
-}
-
-.site-header nav {
-    margin-left: auto;
-}
-
-
-.wrapper-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
-
-
 

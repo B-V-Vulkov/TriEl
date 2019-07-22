@@ -1,8 +1,3 @@
-function myFunction() {
-  var copyText = document.getElementById("myInput");
-  copyText.select();
-
-  document.execCommand("copy");
-
-  alert("Copied the text: " + copyText.value);
-}
+window.addEventListener('DOMContentLoaded', (event) => {
+  document.getElementsByTagName('body')[0].classList.add('loaded');
+});

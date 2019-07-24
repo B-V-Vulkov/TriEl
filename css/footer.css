@@ -6,6 +6,7 @@ Site Footer
     background: var( --background-footer );
     color: rgba(235, 240, 245, 1);
     margin: auto 0;
+    font-size: 0.8em;
 }
 
 .site-footer {

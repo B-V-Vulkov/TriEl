@@ -9,6 +9,7 @@ Main Section
     background-position:  center;
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: hidden;
     display: flex;
     height: 800px;
     margin-bottom: 2em;
@@ -27,7 +28,6 @@ Main Section
 }
 
 .home-section-image .content h2 {
-    font-size: 2.3em;
     padding: 0.3em 2rem;
     max-width: var( --site-max-width );
     margin: 1em auto;
@@ -194,7 +194,6 @@ Main Section
 .home-section-team .linkedin-profile{
     color: rgb(50, 90, 130);
     display: block;
-    
     padding: 0;
 }
 

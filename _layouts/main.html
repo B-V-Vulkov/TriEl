@@ -30,7 +30,10 @@
                 {% endfor %}
                 
                 <!-- For Site Navigation -->
+                <input type="checkbox" id="nav-toggle" class="nav-toggle">
+                
                 <nav class="site-nav">
+                       
                     <ul>
                         {% assign pages = site.pages | sort: "nav-order"  %}
                         {% for p in pages %}
@@ -44,7 +47,7 @@
                         {% endfor %}
                     </ul>
                 </nav>
-
+                <label for="nav-toggle" class="nav-toggle-button"></label> 
             </header>
         </div>
 

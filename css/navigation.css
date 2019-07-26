@@ -44,3 +44,36 @@
 .site-nav ul li.contacts:nth-child(5) {
     opacity: 0.5;
 }
+
+
+
+/* Mobite menu */
+.nav-toggle {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+}
+
+.nav-toggle-button{
+    margin-left: auto;
+}
+.nav-toggle-button::before {
+    font-family: 'Font Awesome 5 Free';
+    color: rgb(50, 90, 130);
+    font-size: 2em;
+    content: '\f0c9';
+    font-weight: 900;
+    display: none;
+} 
+
+@media ( max-width: 700px ) {
+    .nav-toggle-button::before {
+        display: block;
+    }
+
+    .site-nav {
+        display: none;
+    }
+    
+}
+

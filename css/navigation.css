@@ -111,10 +111,27 @@
     margin: 0em;
 }
 
-.nav-toggle:checked + .site-header ul li a {
+/* .nav-toggle:checked + .site-header ul li a {
     width: 100%;
     margin: 0.2em 0;
     padding: 0.2em 0 0.2em 1em;
     background: rgba(0,0,0,0.05);
     box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.2);
+} */
+
+.nav-toggle:checked + .site-header ul li {
+    /* width: 100%; */
+    margin: 0;
+    padding: 0.2em 0 0.2em 1em;
+    border-top: 2px solid #eee;
+}
+
+.nav-toggle:checked + .site-header ul li:last-child {
+
+    border-bottom: 2px solid #eee;
+}
+
+
+.nav-toggle:checked + .site-header ul li a {
+    width: 100%;
 }

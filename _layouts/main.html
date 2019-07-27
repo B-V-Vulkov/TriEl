@@ -15,7 +15,10 @@
 
         <!-- Site Header -->
         <div class="wrapper-header">
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
             <header class="site-header">
+
+                <div class="test">
 
                 <!-- For Site Title -->
                 {% assign pages = site.pages | sort: "nav-order"  %}
@@ -29,9 +32,12 @@
                     {% endif %}        
                 {% endfor %}
                 
-                <!-- For Site Navigation -->
-                <input type="checkbox" id="nav-toggle" class="nav-toggle">
+                <label for="nav-toggle" class="nav-toggle-button"></label> 
+                </div>
+
                 
+                <!-- For Site Navigation -->
+               
                 <nav class="site-nav">
                        
                     <ul>
@@ -47,7 +53,7 @@
                         {% endfor %}
                     </ul>
                 </nav>
-                <label for="nav-toggle" class="nav-toggle-button"></label> 
+                
             </header>
         </div>
 

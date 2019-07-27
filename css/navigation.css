@@ -54,9 +54,6 @@
     position: absolute;
 }
 
-.nav-toggle-button{
-    margin-left: auto;
-}
 .nav-toggle-button::before {
     font-family: 'Font Awesome 5 Free';
     color: rgb(50, 90, 130);
@@ -64,16 +61,55 @@
     content: '\f0c9';
     font-weight: 900;
     display: none;
-} 
+
+}
+
+.site-header .test {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    
+}
 
 @media ( max-width: 700px ) {
+
     .nav-toggle-button::before {
-        display: block;
+        display: flex;
     }
 
     .site-nav {
         display: none;
     }
-    
 }
 
+
+
+
+
+.nav-toggle:checked + .site-header .site-nav {
+    display: block;
+}
+
+
+.nav-toggle:checked + .site-header {
+    display: block;
+}
+
+.nav-toggle:checked + .site-header ul {
+    display: block;
+}
+
+.nav-toggle:checked + .site-header ul li {
+    display: flex;
+
+   
+}
+
+.nav-toggle:checked + .site-header ul li a {
+    width: 100%;
+    margin: 0.2em 0;
+    padding: 0.2em;
+    background: rgba(0,0,0,0.1);
+    font-size: 1.5em;
+}

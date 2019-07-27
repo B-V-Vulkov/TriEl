@@ -19,7 +19,7 @@ body, input, textarea, option, select, table, form {
 }
 
 @media ( max-width: 600px ) {
-    html { font-size: var(--font-size-body-larger, 14px); }
+    html { font-size: var(--font-size-body-larger, 16px); }
 }
 
 @media ( min-width: 600px ) {

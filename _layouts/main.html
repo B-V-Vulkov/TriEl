@@ -17,29 +17,26 @@
         <div class="wrapper-header">
             <input type="checkbox" id="nav-toggle" class="nav-toggle">
             <header class="site-header">
+                <div class="wrapper">
 
-                <div class="test">
-
-                <!-- For Site Title -->
-                {% assign pages = site.pages | sort: "nav-order"  %}
-                {% for p in pages %}
-                    {% if p.title == 'Home' %}                           
-                        {% if p.language == page.language %}
-                            <H1 class="site-title">
-                                <a href="{{ p.url | prepend: site.baseurl }}">TriEl<span class="last-letters">Ltd</span></a>
-                            </H1>
-                        {% endif %}
-                    {% endif %}        
-                {% endfor %}
-                
-                <label for="nav-toggle" class="nav-toggle-button"></label> 
+                    <!-- For Site Title -->
+                    {% assign pages = site.pages | sort: "nav-order"  %}
+                    {% for p in pages %}
+                        {% if p.title == 'Home' %}                           
+                            {% if p.language == page.language %}
+                                <h1 class="site-title">
+                                    <a href="{{ p.url | prepend: site.baseurl }}">TriEl<span class="last-letters">Ltd</span></a>
+                                </h1>
+                            {% endif %}
+                        {% endif %}        
+                    {% endfor %}
+                                
+                    <label for="nav-toggle" class="nav-toggle-button"></label> 
                 </div>
 
                 
                 <!-- For Site Navigation -->
-               
-                <nav class="site-nav">
-                       
+                <nav class="site-nav"> 
                     <ul>
                         {% assign pages = site.pages | sort: "nav-order"  %}
                         {% for p in pages %}

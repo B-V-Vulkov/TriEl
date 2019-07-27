@@ -18,11 +18,11 @@ body, input, textarea, option, select, table, form {
     font: inherit;
 }
 
-@media ( max-width: 600px ) {
-    html { font-size: var(--font-size-body-larger, 16px); }
+@media ( max-width: 768px ) {
+    html { font-size: var(--font-size-body-larger, 14px); }
 }
 
-@media ( min-width: 600px ) {
+@media ( min-width: 769px ) {
     html { font-size: var(--font-size-body-larger, 16px); }
 }
 

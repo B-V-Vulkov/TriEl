@@ -155,3 +155,10 @@ Site Navigation
 .site-nav ul li.contacts:nth-child(5) .icon::after {
     content: '\f100';
 }
+
+@media ( max-width: 768px ) {
+  
+    .wrapper-header { font-size: 12px; }
+
+    .wrapper-header .site-nav { font-size: 14px; }
+}

@@ -46,7 +46,7 @@
                             {% if p.title != 'Home' %}                           
                                 {% if p.language == page.language %}      
                                     <li class="{{ page.class }}">
-                                        <a href="{{ p.url | prepend: site.baseurl }}">{{ p.title }}</a>
+                                        <a href="{{ p.url | prepend: site.baseurl }}">{{ p.title }}<div class="icon"></div></a>
                                     </li>                       
                                 {% endif %}
                             {% endif %}        

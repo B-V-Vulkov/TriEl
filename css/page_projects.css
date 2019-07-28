@@ -49,7 +49,7 @@ Main Section
 Table
 */
 .section-table {
-    margin: 0 1em;
+    margin: 1em;
 }
 
 .projects-section-content .table {
@@ -129,6 +129,10 @@ Table
         display: block;
         padding: 1em;
         margin-bottom: 1em;
+    }
+
+    .projects-section-content .table tbody tr:last-child {
+        margin-bottom: 0;
     }
 
     .projects-section-content .table tbody tr td {

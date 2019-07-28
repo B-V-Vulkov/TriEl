@@ -14,7 +14,6 @@ Main Section
     color: rgba(50, 50, 50, 1);
     margin: 1em;
     display: block;
-    width: 100%;
 }
 
 .projects-section-content  h3::before,
@@ -49,9 +48,8 @@ Main Section
 /* 
 Table
 */
-
 .section-table {
-    margin: 1em;
+    margin: 0 1em;
 }
 
 .projects-section-content .table {
@@ -90,8 +88,6 @@ Table
     transition: all 0.2s ease-in;
 }
 
-
-
 @media ( min-width: 769px ){
 
     .projects-section-content .table tr td:nth-child(1){
@@ -118,9 +114,6 @@ Table
         width: 25%;
     }
 }
-
-
-
 
 @media ( max-width: 768px ){
 
@@ -150,6 +143,4 @@ Table
         font-weight: 900;
         padding-right: 0.5em;
     }
-
-
 } 

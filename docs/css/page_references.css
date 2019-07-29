@@ -35,6 +35,13 @@ Main Section
     margin: 0 0 0 0.5em;
 }
 
+@media ( max-width: 768px ) {
+    
+    .references-section-content h3::after {
+        width: 10%;
+    }
+}
+
 
 /* styles for the section-content */
 .references-section-content .section-content {
@@ -50,11 +57,18 @@ Main Section
     padding-left: 1em;
 }
 
-.references-section-content .section-content ul li h6 {
+@media ( max-width: 768px ) {
+
+    .references-section-content .section-content ul li ul li {
+        margin-bottom: 1em;
+    }
+}
+
+.references-section-content .section-content > ul > li > h6 {
     display: inline-block;
 }
 
-.references-section-content .section-content ul li h6::before {
+.references-section-content .section-content > ul > li > h6::before {
     font-family: 'Font Awesome 5 Free';
     content: '\f105';
     font-weight: 900;
@@ -67,6 +81,8 @@ Main Section
     margin-left: 0.1em
 }
 
-.references-section-content .section-content ul li a:hover {
-    border-bottom: 2px solid rgba(50, 90, 130, 0.5);
+@media ( min-width: 769px ) {
+    .references-section-content .section-content ul li a:hover {
+        border-bottom: 2px solid rgba(50, 90, 130, 0.5);
+    }
 }

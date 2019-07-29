@@ -35,6 +35,13 @@ Main Section
     margin: 0 0 0 0.5em;
 }
 
+@media ( max-width: 768px ) {
+    
+    .projects-section-content h3::after {
+        width: 10%;
+    }
+}
+
 .projects-section-content .download a {
     color: rgba(50, 90, 130, 1);
 }

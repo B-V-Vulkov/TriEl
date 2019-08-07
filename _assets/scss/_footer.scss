@@ -52,12 +52,16 @@ Site Footer
             text-align: start;
             width: 100%;
             border: none;
-            padding: 1.5em;
-            border-bottom: 2px solid rgba(50, 90, 130, 0.5);
-
+            padding: 1em;
+           
             ul {
                 padding: 0;
             }
+        }
+
+        .site-footer-contacts,
+        .site-footer-address {
+            border-bottom: 2px solid rgba(50, 90, 130, 0.5);
         }
 
         .site-footer-contacts {

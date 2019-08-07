@@ -119,7 +119,7 @@ layouts
   margin: 0 auto; }
 
 .wrapper-main {
-  margin-top: 4em; }
+  margin-top: 3.2em; }
 
 /* 
 Site Header
@@ -328,12 +328,14 @@ Site Footer
       text-align: start;
       width: 100%;
       border: none;
-      padding: 1.5em;
-      border-bottom: 2px solid rgba(50, 90, 130, 0.5); }
+      padding: 1em; }
       .section-information .site-footer-contacts ul,
       .section-information .site-footer-address ul,
       .section-information .site-footer-language ul {
         padding: 0; }
+    .section-information .site-footer-contacts,
+    .section-information .site-footer-address {
+      border-bottom: 2px solid rgba(50, 90, 130, 0.5); }
     .section-information .site-footer-contacts {
       padding-top: 1em; }
     .section-information .language-switcher {

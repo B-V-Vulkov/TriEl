@@ -13,24 +13,24 @@ Main Section
     display: flex;
     height: 800px;
     margin-bottom: 2em;
-}
 
-.home-section-image .color-filter {
-    background: rgba(0, 0, 0, 0.3);
-    width: 100%;
-}
+    .color-filter {
+        background: rgba(0, 0, 0, 0.3);
+        width: 100%;
+    }
 
-.home-section-image .content {
-    background: rgba(0, 0, 0, 0.2);
-    color: rgba(235, 240, 245, 1);
-    width: 100%;
-    margin-top: 1em;
-}
+    .content {
+        background: rgba(0, 0, 0, 0.2);
+        color: rgba(235, 240, 245, 1);
+        width: 100%;
+        margin-top: 1em;
 
-.home-section-image .content h2 {
-    padding: 0.3em 2rem;
-    max-width: var( --site-max-width );
-    margin: 1em auto;
+        h2 {
+            padding: 0.3em 2rem;
+            max-width: var( --site-max-width );
+            margin: 1em auto;
+        }
+    }
 }
 
 /* styles for the home-section-activity */
@@ -38,41 +38,51 @@ Main Section
     max-width: var( --site-max-width );
     margin: 0 auto;
     text-align: center;
-}
 
-.home-section-activity ul {
-    display: flex;
-    justify-content: center;
-}
+    ul {
+        display: flex;
+        justify-content: center;
 
-.home-section-activity ul li {
-    list-style: none;
-    width: 30%;
-    padding: 0 1em;
-    margin-top: 1em;
-}
+        li {
+            list-style: none;
+            width: 30%;
+            padding: 0 1em;
+            margin-top: 1em;
+        }
+    }
 
-/* adding icons for home-section-activity*/
-.home-section-activity .scope::before,
-.home-section-activity .activity::before,
-.home-section-activity .partners::before {
-    font-family: 'Font Awesome 5 Free';
-    font-size: 1.7em;
-    color: rgba(50, 50, 50, 1);
-    display: block;
-    margin-bottom: 0.2em;
-}
+    /* adding icons for home-section-activity*/
+    .scope::before,
+    .activity::before,
+    .partners::before {
+        font-family: 'Font Awesome 5 Free';
+        font-size: 1.7em;
+        color: rgba(50, 50, 50, 1);
+        display: block;
+        margin-bottom: 0.2em;
+    }
+    
+    .scope::before {
+        content: '\f57d';
+    }
 
-.home-section-activity .scope::before {
-    content: '\f57d';
-}
+    .activity::before {
+        content: '\f4ce';
+    }
 
-.home-section-activity .activity::before {
-    content: '\f4ce';
-}
+    .partners::before {
+        content: '\f2b5';
+    }
 
-.home-section-activity .partners::before {
-    content: '\f2b5';
+    @include bp( phone ) {
+        ul {
+            flex-wrap: wrap;
+        }
+
+        ul li {
+            width: 250px;
+        }
+    }
 }
 
 /* styles for the home-section-description */
@@ -85,14 +95,14 @@ Main Section
     text-align: center;
     max-width: var( --site-max-width );
     margin: 0 auto;
-}
 
-.home-section-description-text h2 {
-    padding: 0;
-}
+    h2 {
+        padding: 0;
+    }
 
-.home-section-description-text p:last-child {
-    padding-bottom: 0;
+    p:last-child {
+        padding-bottom: 0;
+    }
 }
 
 /* styles for the home-section-team */
@@ -101,70 +111,78 @@ Main Section
     max-width: var( --site-max-width );
     margin: 0 auto;
     padding: 2em;
-}
 
-.home-section-team h2 {
-    width: 100%;
-    padding: 0;
-}
+    h2 {
+        width: 100%;
+        padding: 0;
+    }
 
-.home-section-team ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 0;
-}
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0;
 
-.home-section-team ul li {
-    width: 28%;
-    margin: 1em;
-    list-style: none;
-}
+        li {
+            width: 28%;
+            margin: 1em;
+            list-style: none;
+        }
+    }
 
-.home-section-team .content {
-    border: 1px solid black;
-    padding: 1em;
-    border-radius: 0.3em;
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
-    opacity: 0.85;
-    transition: opacity 0.4s linear, box-shadow 0.3s linear;
-}
+    .content {
+        border: 1px solid black;
+        padding: 1em;
+        border-radius: 0.3em;
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+        opacity: 0.85;
+        transition: opacity 0.4s linear, box-shadow 0.3s linear;
+    }
 
-.home-section-team .content:hover {
-    box-shadow: 0px 0px 5px 1px rgba(0,0,0, 0.8);
-    opacity: 1;
-}
+    @include bp( mobile ) {
+        .content:hover {
+            box-shadow: 0px 0px 5px 1px rgba(0,0,0, 0.8);
+            opacity: 1;
+        }
+    }
 
-.home-section-team .picture {
-    background-position:  center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: block;
-    width: 100%;
-    height: auto;
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
-    border-radius: 0.2em;
-}
+    .picture {
+        background-position:  center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: block;
+        width: 100%;
+        height: auto;
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+        border-radius: 0.2em;
+    }
 
-.home-section-team .name {
-    color: rgba(50, 50, 50, 1);
-}
+    .name {
+        color: rgba(50, 50, 50, 1);
+    }
 
-.home-section-team .job-title {
-    color: rgba(50, 50, 50, 1);
-    padding: 0.8em;
-}
+    .job-title {
+        color: rgba(50, 50, 50, 1);
+        padding: 0.8em;
+    }
 
-.home-section-team .linkedin-profile{
-    color: rgb(50, 90, 130);
-    display: block;
-    padding: 0;
-}
+    .linkedin-profile{
+        color: rgb(50, 90, 130);
+        display: block;
+        padding: 0;
+    }
 
-.home-section-team .linkedin-profile::before {
-    font-family: 'Font Awesome 5 Brands';
-    content: '\f08c';
-    padding-right: 0.2em;
+    .linkedin-profile::before {
+        font-family: 'Font Awesome 5 Brands';
+        content: '\f08c';
+        padding-right: 0.2em;
+    }
+
+    @include bp( phone ) {
+        ul li {
+            width: 250px;
+        }
+    }
 }
 
 /* styles for the home-section-footer */
@@ -177,8 +195,9 @@ Main Section
     max-width: var( --site-max-width );
     margin: 0 auto;
     text-align: center;
+
+    p {
+        padding: 0;
+    }
 }
 
-.home-section-footer-text p {
-    padding: 0;
-}

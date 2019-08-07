@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{{ site.baseurl }}/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="{{ site.baseurl }}/css/site.css">
     <script src="{{ site.baseurl }}/scripts/site.js"></script>
+    <script src="{{ site.baseurl }}/scripts/gallery.js"></script>
 </head>
 <body>
 
@@ -67,9 +68,8 @@
         <div class="wrapper-footer">
 
             <footer class="site-footer">
-                <section class="section-information">
-
-                    <div class="site-footer-contacts">
+                <ul class="section-information">
+                    <li class="site-footer-contacts">
                         {% if page.language == 'en' %}
                             <h6>Contacts</h6>
                         {% else %}
@@ -79,9 +79,9 @@
                             <li class="phone"> (+359 2) 888 88 88</li>
                             <li class="email"> something@triel.bg</li>
                         </ul>
-                    </div>
+                    </li>
             
-                    <div class="site-footer-address">
+                    <li class="site-footer-address">
                         {% if page.language == 'en' %}
                             <h6>Address</h6>
                             <ul>
@@ -95,10 +95,10 @@
                                 <li>София, България</li>
                             </ul>            
                         {% endif %}
-                    </div>
+                    </li>
 
                     <!-- Language Switching -->
-                    <div class="site-footer-language">
+                    <li class="site-footer-language">
                         <nav class="language-switcher">
                             {% if page.language == 'en' %}
                                 <h6>Page language</h6>
@@ -130,8 +130,8 @@
                                 {% endif %}
                             {% endif %}
                         </nav>
-                    </div>
-                </section>
+                    </li>
+                </ul>
 
                 <!-- Copyright Information -->
                 <section class="section-copyright">

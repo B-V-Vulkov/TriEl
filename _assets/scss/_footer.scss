@@ -1,0 +1,112 @@
+/* 
+Site Footer
+*/
+
+.wrapper-footer {
+    background: var( --background-footer );
+    color: rgba(235, 240, 245, 1);
+    margin: auto 0;
+    font-size: 0.8em;
+
+    .site-footer {
+        max-width: var( --site-max-width );
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .site-footer ul li {
+        list-style: none;
+    }
+}
+
+/* styles for the section-information */
+.section-information {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 1em;
+
+    .site-footer-contacts,
+    .site-footer-address,
+    .site-footer-language {
+    width: 30%;
+    text-align: center;
+    }
+
+    .site-footer-contacts,
+    .site-footer-address {
+    border-right: 2px solid rgba(50, 90, 130, 0.5);
+    }
+
+    .site-footer-contacts ul {
+        padding-bottom: 0;
+    }
+
+
+    @include bp( phone ) {
+        .site-footer-contacts,
+        .site-footer-address,
+        .site-footer-language {
+            text-align: start;
+            width: 100%;
+            border: none;
+            padding: 1.5em;
+            border-bottom: 2px solid rgba(50, 90, 130, 0.5);
+
+            ul {
+                padding: 0;
+            }
+        }
+
+        .site-footer-contacts {
+            padding-top: 1em;
+        }
+
+        .language-switcher {
+            display: flex;
+            padding: 0;
+
+            ul {
+                display: flex;
+
+                li {
+                    padding-left: 3em;
+                }
+            }
+
+            h6 {
+                padding: 0;
+            }
+        }
+    }
+
+    /* styles for the site-footer-language */
+    .language-switcher {
+        a {
+            color: rgba(235, 240, 245, 1);
+        }
+
+        .en_en,
+        .bg_bg {
+            opacity: 0.4;
+        }
+
+        .bg_en:hover,
+        .en_bg:hover {
+            color: rgb(50, 90, 130);
+        }
+    }
+}
+
+/* styles for the section-copyright */
+.section-copyright {
+    margin: 0 auto;
+    color: rgb(50, 90, 130);
+
+    p {
+        padding: 0;
+        font-size: 0.8em;
+    }
+}

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/TriEl/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="/TriEl/css/site.css">
     <script src="/TriEl/scripts/site.js"></script>
+    <script src="/TriEl/scripts/gallery.js"></script>
 </head>
 <body>
 
@@ -150,10 +151,49 @@
         <div class="wrapper-main">
 
             <main class="site-main">
-                <section class="gallery">
-    <h1>Page Gallery EN</h1>
-    <h3>!!! Will be added soon !!!</h3>
+                <section class="gallery-section-content">
+    <div class="section-title">
+        <h3>Gallery</h3>
+    </div>
+    <div class="content">
+         <!-- The Modal -->
+         <div id="modalImg" class="modal">
+                <span class="close" id="closeCurrentImg">close</span>
+                <samp class="close" id="goToNextImg">next</samp>
+                <samp class="close" id="goToPreviousImg">previous</samp>
+                <img class="modal-content" id="contentImg">
+                <div id="caption"></div>
+              </div>
+        <ul>
+            <li class="portrait"><img onload="changePicture(img101)" id="img101" src="img/Page-Gallery/img101.jpg" alt="Snow"></li>
+            <li class="portrait"><img onload="changePicture(img102)" id="img102" src="img/Page-Gallery/img102.jpg" alt="Snowjhhjj"></li>
+            <li class="landscape"><img onload="changePicture(img103)" id="img103" src="img/Page-Gallery/img103.jpg" alt="Snowjhhjj"></li>
+            <li class="portrait"><img onload="changePicture(img104)" id="img104" src="img/Page-Gallery/img104.jpg" alt="Snowjhhjj"></li>
+            <li class="portrait"><img onload="changePicture(img105)" id="img105" src="img/Page-Gallery/img105.jpg" alt="Snowjhhjj"></li>
+            <li class="portrait"><img onload="changePicture(img106)" id="img106" src="img/Page-Gallery/img106.jpg" alt="Snowjhhjj"></li>
+            <li class="landscape"><img onload="changePicture(img107)" id="img107" src="img/Page-Gallery/img107.jpg" alt="Snowjhhjj"></li>
+            <li class="landscape"><img onload="changePicture(img108)" id="img108" src="img/Page-Gallery/img108.jpg" alt="Snowjhhjj"></li>
+            <li class="portrait"><img onload="changePicture(img109)" id="img109" src="img/Page-Gallery/img109.jpg" alt="Snowjhhjj"></li>
+            <li class="portrait"><img onload="changePicture(img110)" id="img110" src="img/Page-Gallery/img110.jpg" alt="Snowjhhjj"></li>
+            <li class="landscape"><img onload="changePicture(img111)" id="img111" src="img/Page-Gallery/img111.jpg" alt="Snowjhhjj"></li>
+            <li class="portrait"><img onload="changePicture(img112)" id="img112" src="img/Page-Gallery/img112.jpg" alt="Snowjhhjj"></li>
+            <li class="landscape"><img onload="changePicture(img113)" id="img113" src="img/Page-Gallery/img113.jpg" alt="Snowjhhjj"></li>
+            <li class="landscape"><img onload="changePicture(img114)" id="img114" src="img/Page-Gallery/img114.jpg" alt="Snowjhhjj"></li>
+            <li class="portrait"><img onload="changePicture(img115)" id="img115" src="img/Page-Gallery/img115.jpg" alt="Snowjhhjj"></li>
+            <!-- <li><img onload="changePicture(img116)" id="img116" src="img/Page-Gallery/img116.jpg" alt="Snowjhhjj"></li>
+            <li class="portrait"><img onload="changePicture(img117)" id="img117" src="img/Page-Gallery/img117.jpg" alt="Snowjhhjj"></li>
+            <li><img onload="changePicture(img118)" id="img118" src="img/Page-Gallery/img118.jpg" alt="Snowjhhjj"></li>
+            <li><img onload="changePicture(img119)" id="img119" src="img/Page-Gallery/img119.jpg" alt="Snowjhhjj"></li>
+            <li><img onload="changePicture(img120)" id="img120" src="img/Page-Gallery/img120.jpg" alt="Snowjhhjj"></li> -->
+        </ul>
+        <p>dsdsdsdsd</p>
+        <p>dsdsd</p>
+        <p>dsdsd</p>
+
+    </div>
 </section>
+
+
             </main>
 
         </div>
@@ -162,9 +202,8 @@
         <div class="wrapper-footer">
 
             <footer class="site-footer">
-                <section class="section-information">
-
-                    <div class="site-footer-contacts">
+                <ul class="section-information">
+                    <li class="site-footer-contacts">
                         
                             <h6>Contacts</h6>
                         
@@ -172,9 +211,9 @@
                             <li class="phone"> (+359 2) 888 88 88</li>
                             <li class="email"> something@triel.bg</li>
                         </ul>
-                    </div>
+                    </li>
             
-                    <div class="site-footer-address">
+                    <li class="site-footer-address">
                         
                             <h6>Address</h6>
                             <ul>
@@ -182,10 +221,10 @@
                                 <li>Sofia, Bulgaria</li>
                             </ul>
                         
-                    </div>
+                    </li>
 
                     <!-- Language Switching -->
-                    <div class="site-footer-language">
+                    <li class="site-footer-language">
                         <nav class="language-switcher">
                             
                                 <h6>Page language</h6>
@@ -198,8 +237,8 @@
                                 
                             
                         </nav>
-                    </div>
-                </section>
+                    </li>
+                </ul>
 
                 <!-- Copyright Information -->
                 <section class="section-copyright">

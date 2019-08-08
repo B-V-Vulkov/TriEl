@@ -863,6 +863,7 @@ Main Section
     .gallery-section-content .modal .close,
     .gallery-section-content .modal .nextImg,
     .gallery-section-content .modal .previousImg {
+      display: block;
       color: #ebf0f5;
       opacity: 0.4;
       transition: opacity 0.2s linear;
@@ -873,17 +874,24 @@ Main Section
       .gallery-section-content .modal .nextImg:hover,
       .gallery-section-content .modal .previousImg:hover {
         opacity: 1; } }
+    @media (max-width: 768px) {
+      .gallery-section-content .modal .nextImg,
+      .gallery-section-content .modal .previousImg {
+        position: absolute;
+        top: 20% !important; }
+      .gallery-section-content .modal .nextImg img {
+        padding: 30vw 0 30vw 30vw; }
+      .gallery-section-content .modal .previousImg img {
+        padding: 30vw 30vw 30vw 0; } }
     .gallery-section-content .modal .close {
       top: 20px;
       right: 20px; }
     .gallery-section-content .modal .nextImg {
       right: 0;
-      top: 50%;
-      bottom: 50%; }
+      top: 50%; }
     .gallery-section-content .modal .previousImg {
       left: 0;
-      top: 50%;
-      bottom: 50%; }
+      top: 50%; }
 
 /* 
 Page Contacts

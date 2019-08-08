@@ -158,6 +158,7 @@ Main Section
         .close,
         .nextImg,
         .previousImg {
+            display: block;
             color: rgb(235, 240, 245);
             opacity: 0.4;
             transition: opacity 0.2s linear;
@@ -173,6 +174,23 @@ Main Section
             }
         }
 
+        @include bp( phone ) {
+            .nextImg,
+            .previousImg { 
+                position: absolute;
+                
+                top: 20% !important;
+            }
+
+            .nextImg img {
+                padding: 30vw 0 30vw 30vw;
+            }
+
+            .previousImg img {
+                padding: 30vw 30vw 30vw 0;
+            }
+        }
+
         /* The Close Picture Button */
         .close {
             top: 20px;
@@ -183,14 +201,12 @@ Main Section
         .nextImg {
             right: 0;
             top: 50%;
-            bottom: 50%;   
         }
 
         /* The Previous Picture Button */
         .previousImg {
             left: 0;
             top: 50%;
-            bottom: 50%;
         }
     }
 }

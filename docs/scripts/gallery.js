@@ -7,8 +7,15 @@ function changePicture(id) {
     var next = document.getElementById("goToNextImg");
     var previous = document.getElementById("goToPreviousImg");
     var closeImg = document.getElementById("closeCurrentImg");
-    
+
     img.onclick = function(){
+        var elementClass = id.className;
+        var modalContent = document.getElementById("contentImg");
+        modalContent.classList.remove("portrait");
+        modalContent.classList.remove("landscape");
+        modalContent.classList.remove("square");
+        modalContent.classList.add(elementClass);
+
         modal.style.display = "block";
         modalImg.src = this.src;
         captionText.innerHTML = this.alt;
@@ -51,6 +58,15 @@ function changePicture(id) {
         var leftPart = currentSrc.substring(0, currentSrc.length - 7);
         var rightPart = currentSrc.substring(currentSrc.length - 7, currentSrc.length - 4);
         var nextNumber = parseInt(rightPart) + 1;
+
+        var currentId = "img" + nextNumber;
+        var elementClass = (document.getElementById(currentId)).className;
+        var modalContent = document.getElementById("contentImg");
+        modalContent.classList.remove("portrait");
+        modalContent.classList.remove("landscape");
+        modalContent.classList.remove("square");
+        modalContent.classList.add(elementClass);
+
         var nextSrc = leftPart + nextNumber + ".jpg";
         modalImg.src = nextSrc;
     };
@@ -74,6 +90,15 @@ function changePicture(id) {
         var leftPart = currentSrc.substring(0, currentSrc.length - 7);
         var rightPart = currentSrc.substring(currentSrc.length - 7, currentSrc.length - 4);
         var nextNumber = parseInt(rightPart) - 1;
+
+        var currentId = "img" + nextNumber;
+        var elementClass = (document.getElementById(currentId)).className;
+        var modalContent = document.getElementById("contentImg");
+        modalContent.classList.remove("portrait");
+        modalContent.classList.remove("landscape");
+        modalContent.classList.remove("square");
+        modalContent.classList.add(elementClass);
+
         var nextSrc = leftPart + nextNumber + ".jpg";
         modalImg.src = nextSrc;
     };
@@ -126,6 +151,15 @@ function changePicture(id) {
             var leftPart = currentSrc.substring(0, currentSrc.length - 7);
             var rightPart = currentSrc.substring(currentSrc.length - 7, currentSrc.length - 4);
             var nextNumber = parseInt(rightPart) + 1;
+
+            var currentId = "img" + nextNumber;
+            var elementClass = (document.getElementById(currentId)).className;
+            var modalContent = document.getElementById("contentImg");
+            modalContent.classList.remove("portrait");
+            modalContent.classList.remove("landscape");
+            modalContent.classList.remove("square");
+            modalContent.classList.add(elementClass);
+
             var nextSrc = leftPart + nextNumber + ".jpg";
             modalImg.src = nextSrc;
         }
@@ -148,6 +182,15 @@ function changePicture(id) {
             var leftPart = currentSrc.substring(0, currentSrc.length - 7);
             var rightPart = currentSrc.substring(currentSrc.length - 7, currentSrc.length - 4);
             var nextNumber = parseInt(rightPart) - 1;
+
+            var currentId = "img" + nextNumber;
+            var elementClass = (document.getElementById(currentId)).className;
+            var modalContent = document.getElementById("contentImg");
+            modalContent.classList.remove("portrait");
+            modalContent.classList.remove("landscape");
+            modalContent.classList.remove("square");
+            modalContent.classList.add(elementClass);
+
             var nextSrc = leftPart + nextNumber + ".jpg";
             modalImg.src = nextSrc;
         }

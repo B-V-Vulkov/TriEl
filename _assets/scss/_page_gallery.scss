@@ -29,7 +29,7 @@ Main Section
 
         @include bp( phone ) {
             ul {
-                grid-template-columns: repeat(4, 1fr);
+                grid-template-columns: repeat(5, 1fr);
             }
         }
 
@@ -94,9 +94,15 @@ Main Section
             grid-row: span 1;
 
             img {
-                width: 100%;
+                width: auto;
                 height: 100%;
-            }
+            }  
+        }
+
+        .square::before {
+            display: block;
+            content: '';
+            padding-top: 100%;
         }
     }
 
@@ -127,6 +133,17 @@ Main Section
             height: auto;
             max-width: 700px;
             max-height: 700px;
+        }
+
+        .portrait {
+            height: 60%;
+            width: auto;
+        }
+
+        .landscape,
+        .square {
+            height: auto;
+            width: 80%;
         }
 
         /* Caption of Modal Image */

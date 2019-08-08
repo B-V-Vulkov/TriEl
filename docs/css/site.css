@@ -874,24 +874,30 @@ Main Section
       .gallery-section-content .modal .nextImg:hover,
       .gallery-section-content .modal .previousImg:hover {
         opacity: 1; } }
-    @media (max-width: 768px) {
-      .gallery-section-content .modal .nextImg,
-      .gallery-section-content .modal .previousImg {
-        position: absolute;
-        top: 20% !important; }
-      .gallery-section-content .modal .nextImg img {
-        padding: 30vw 0 30vw 30vw; }
-      .gallery-section-content .modal .previousImg img {
-        padding: 30vw 30vw 30vw 0; } }
     .gallery-section-content .modal .close {
       top: 20px;
       right: 20px; }
     .gallery-section-content .modal .nextImg {
+      padding-right: 20px;
       right: 0;
       top: 50%; }
     .gallery-section-content .modal .previousImg {
+      padding-left: 20px;
       left: 0;
       top: 50%; }
+    @media (max-width: 768px) {
+      .gallery-section-content .modal .close {
+        padding: 2vw;
+        top: 0;
+        right: 0; }
+      .gallery-section-content .modal .nextImg,
+      .gallery-section-content .modal .previousImg {
+        top: 20%;
+        padding: 0; }
+      .gallery-section-content .modal .nextImg img {
+        padding: 30vw 2vw 30vw 30vw; }
+      .gallery-section-content .modal .previousImg img {
+        padding: 30vw 30vw 30vw 2vw; } }
 
 /* 
 Page Contacts

@@ -903,6 +903,38 @@ Main Section
 Page Contacts
 Main Section
 */
-.contacts {
-  text-align: center;
-  margin: 350px 0; }
+.contacts-section-content {
+  max-width: var(--site-max-width);
+  margin: 0 auto;
+  overflow: hidden; }
+  .contacts-section-content .section-title {
+    color: #323232;
+    margin: 1em;
+    display: block; }
+  .contacts-section-content .section-content {
+    padding: 0 1em; }
+    .contacts-section-content .section-content p {
+      display: flex; }
+    .contacts-section-content .section-content .address::before,
+    .contacts-section-content .section-content .phone::before,
+    .contacts-section-content .section-content .email::before {
+      font-family: 'Font Awesome 5 Free';
+      color: #325a82;
+      padding: 0 0.5em;
+      font-weight: 900; }
+    .contacts-section-content .section-content .address::before {
+      content: '\f3c5'; }
+    .contacts-section-content .section-content .phone::before {
+      content: '\f87b'; }
+    .contacts-section-content .section-content .email::before {
+      content: '\f0e0'; }
+
+.section-map {
+  padding: 2em 1em 0 1em;
+  max-width: 2000px;
+  margin: 0 auto;
+  overflow: hidden; }
+  .section-map iframe {
+    border: none;
+    width: 100%;
+    height: 80vh; }

@@ -1,6 +1,9 @@
+/* 
+Home Page
+Main Section
+*/
 
 .gallery-section-content{
-
     max-width: var( --site-max-width );
     margin: 0 auto;
     overflow: hidden;
@@ -11,7 +14,9 @@
         display: block;
     }
 
+    /* styles for The Gallery */
     .content {
+        padding: 1em;
 
         ul {
             padding: 0;
@@ -22,92 +27,175 @@
             grid-auto-flow: dense;
         }
 
+        @include bp( phone ) {
+            ul {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
         li {
             position: relative;
             overflow: hidden;
             list-style: none outside;
-            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: opacity 0.4s linear;
+            opacity: 0.8;
+
+            img {
+                height: inherit;
+                display: block;
+                position: absolute;
+                margin: auto;
+            }
+        }
+
+        li:hover {
+            opacity: 1;
         }
         
-        li.landscape {
+        .landscape {
             grid-column: span 2;
             grid-row: span 1;
+
+            img {
+                width: 100%;
+                height: auto;
+            }  
+        }
+
+        .landscape::before {
+            display: block;
+            content: '';
+            padding-top: 50%;
         }
            
-        li.portrait {
+        .portrait {
             grid-column: span 1;
             grid-row: span 2;
+
+            img {
+                width: auto;
+                height: 100%;
+            }
+        }
+
+        .portrait::before {
+            display: block;
+            content: '';
+            padding-top: 200%;
         }
      
-        li.square {
+        .square {
             grid-column: span 1;
             grid-row: span 1;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    /* styles for The Modal */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 2;
+        top: 0; left: 0; bottom: 0; right: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0,0,0,0.9);
+
+
+        .wrapper-modal-content {
+            display: table-cell;
+            height: 100vh;
+            width: 100vw;
+            text-align: center;
+            vertical-align: middle;
         }
 
-    }
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            height: auto;
+            max-width: 700px;
+            max-height: 700px;
+        }
 
-    
-    
-    
+        /* Caption of Modal Image */
+        .caption {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+            color: #ccc;
+            padding: 0.5em 0;
+            -webkit-animation-name: zoom;
+            -webkit-animation-duration: 0.6s;
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
 
-    
+        @-webkit-keyframes zoom {
+            from {-webkit-transform:scale(0)} 
+            to {-webkit-transform:scale(1)}
+        }
+          
+          @keyframes zoom {
+            from {transform:scale(0)} 
+            to {transform:scale(1)}
+        }
 
-    
-    
-    
-    
-    li.landscape::before,
-    li.landscape-big::before  {
-        display: block;
-        content: '';
-        padding-top: 50%;
-    }
-    
-    
-    
-    li.portrait::before,
-    li.portrait-big::before {
-        display: block;
-        content: '';
-        padding-top: 200%;
-    }
-    
-    
-    
-    
-    li img {
-        height: inherit;
-        display: block;
-        position: absolute;
-        top: 0; bottom:0; left: 0; right:0;
-        margin: auto;
+        /* The Buttons */
+        .close,
+        .nextImg,
+        .previousImg {
+            color: rgb(235, 240, 245);
+            opacity: 0.4;
+            transition: opacity 0.2s linear;
+            cursor: pointer;
+            position: absolute;
+        }
 
-    }
-    
-    
-    li.landscape img {
-        width: 100%;
-        height: auto;
-    }
-    
-    li.portrait img {
-        width: auto;
-        height: 100%;
-    }
-    
-    li.square img {
-        width: 100%;
-        height: 100%;
-    }
-    
-    
-    li div {
-        
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
+        @include bp( desktop ) {
+            .close:hover,
+            .nextImg:hover,
+            .previousImg:hover {
+                opacity: 1;
+            }
+        }
+
+        /* The Close Picture Button */
+        .close {
+            top: 20px;
+            right: 20px;
+        }
+
+        /* The Next Picture Button */
+        .nextImg {
+            right: 0;
+            top: 50%;
+            bottom: 50%;   
+        }
+
+        /* The Previous Picture Button */
+        .previousImg {
+            left: 0;
+            top: 50%;
+            bottom: 50%;
+        }
     }
 }
+
+
+
+
 

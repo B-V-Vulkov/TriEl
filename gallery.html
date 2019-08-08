@@ -13,12 +13,14 @@ class: gallery
     <div class="content">
          <!-- The Modal -->
          <div id="modalImg" class="modal">
-                <span class="close" id="closeCurrentImg">close</span>
-                <samp class="close" id="goToNextImg">next</samp>
-                <samp class="close" id="goToPreviousImg">previous</samp>
+            <span class="close" id="closeCurrentImg"><img src="img/Page-Gallery/icons/close.png" alt=""></span>
+            <samp class="nextImg" id="goToNextImg"><img src="img/Page-Gallery/icons/next.png" alt="icon"></samp>
+            <samp class="previousImg" id="goToPreviousImg"><img src="img/Page-Gallery/icons/prev.png" alt="icon"></samp>
+            <div class="wrapper-modal-content">
                 <img class="modal-content" id="contentImg">
-                <div id="caption"></div>
-              </div>
+                <div class="caption" id="caption"></div>
+            </div>
+      </div>
         <ul>
             <li class="portrait"><img onload="changePicture(img101)" id="img101" src="img/Page-Gallery/img101.jpg" alt="Substation Casterly Rock 400/220/110kV - Delivery and instalation of cables for DIGSI network for relay protections"></li>
             <li class="landscape"><img onload="changePicture(img102)" id="img102" src="img/Page-Gallery/img102.jpg" alt="Substation Casterly Rock 400/220/110kV - Delivery and instalation of cables for DIGSI network for relay protections"></li>

@@ -937,7 +937,6 @@ Main Section
 
 .section-map {
   padding: 2em 1em 0 1em;
-  max-width: 2000px;
   margin: 0 auto;
   overflow: hidden; }
   .section-map iframe {

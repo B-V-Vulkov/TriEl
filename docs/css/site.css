@@ -107,17 +107,13 @@ h4 {
   color: #325a82; }
 
 :root {
+  --site-max-width: 1000px;
   --background-header: #aaa;
-  --background-footer: #222;
-  --site-max-width: 1000px; }
+  --background-footer: #222; }
 
 /* 
 layouts
 */
-.site {
-  max-width: 2000px;
-  margin: 0 auto; }
-
 .wrapper-main {
   margin-top: 3.2em; }
 
@@ -127,9 +123,7 @@ Site Header
 .wrapper-header {
   border-bottom: 2px solid #eee;
   background: rgba(255, 255, 255, 0.95);
-  z-index: 1;
-  max-width: 2000px;
-  margin: 0 auto; }
+  z-index: 1; }
 
 .site .site-header {
   max-width: 1000px;
@@ -516,8 +510,7 @@ Main Section
   /* styles for the navigation-section */ }
   .services-section-content .section-title {
     margin: 1em;
-    display: block;
-    width: 100%; }
+    display: block; }
   .services-section-content .content {
     display: flex; }
   @media (max-width: 768px) {
